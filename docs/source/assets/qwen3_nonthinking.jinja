@@ -44,10 +44,10 @@
             {%- if loop.last or (not loop.last and reasoning_content) %}
                 {{- '<|im_start|>' + message.role + '\n<think>\n' + reasoning_content.strip('\n') + '\n</think>\n\n' + content.lstrip('\n') }}
             {%- else %}
-                {{- '<|im_start|>' + message.role + '\n' + content }}
+                {{- '<|im_start|>' + message.role + '\n<think>\n\n</think>\n\n' + content.lstrip('\n') }}
             {%- endif %}
         {%- else %}
-            {{- '<|im_start|>' + message.role + '\n' + content }}
+            {{- '<|im_start|>' + message.role + '\n<think>\n\n</think>\n\n' + content.lstrip('\n') }}
         {%- endif %}
         {%- if message.tool_calls %}
             {%- for tool_call in message.tool_calls %}
