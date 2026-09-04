@@ -284,6 +284,10 @@ To export and run on ExecuTorch (iOS, Android, Mac, Linux, and more), please fol
 
 To export and run on MNN, which supports Qwen3 on mobile devices, please visit [Alibaba MNN](https://github.com/alibaba/MNN).
 
+### LiteRT-LM
+
+To run on Android, iOS and desktop with Google's [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM), use a pre-converted `.litertlm` bundle from Hugging Face, e.g. [litert-community/Qwen3-4B-Thinking-2507](https://huggingface.co/litert-community/Qwen3-4B-Thinking-2507) (int4; measured speeds on the model card).
+
 ### MLX LM
 
 If you are running on Apple Silicon, [`mlx-lm`](https://github.com/ml-explore/mlx-lm) also supports Qwen3 (`mlx-lm>=0.24.0`). 
